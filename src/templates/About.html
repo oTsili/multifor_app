@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% set title = 'About MULTIFOR' %}
+    {% set title_class =  'small-header' %}
+    {% include "favicon.html" %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/queries.css') }}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <title class="small-title" style="margin-left:12px!important;">{{ title }}</title>
+{#    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">#}
+
+
+</head>
+<body>
+    <header>
+        <!--  nav  -->
+        {% include "navBar.html" %}
+        <!-- End:nav   -->
+    </header>
+    <div class="about header">
+        <h3 style="margin:30px 60px 0 0;color:#888;">Deriving knowledge from Time-series Analysis & Machine Learning</h3>
+    </div>
+
+    <div class="about" style="font-family: 'Lato', sans-serif;">
+            <p>The need for professional managers to gain additional knowledge, so that they can lead their company ahead its competition, is as necessary as never before.
+            The rush volatility and uncertainty that characterizes the global market, and specifically the manufacturing industry, stresses the need for additional knowledge that Business Intelligence and Analytics (BIA) is capable to provide.
+            <p>MULTIFOR, which refers to the Multi-scope Industrial Forecasting Framework and is based on time-series data analytics of BIA, is what Decision-Makers seek in the Risk Management sector. It exploits Data Mining with Machine Learning (Long-Short Term Memory Recurrent Neural Networks - LSTM RNNs) into the BIA sector for businesses advantage and in particular for elevator manufacturing industry.</p>
+            <p>It has started at 2020 as a part of a MSc thesis project from Data &amp; Web Science student <a href="#" target="_blank">Odysseas Tsiligkeridis</a> with supervision from <a href="https://datalab.csd.auth.gr/" target="_blank">Prof. Athena Vakali</a> and the support of the  <a href="#" target="_blank">TA Vaia Moustaka</a>, which had subject “MULTIFOR: A multi-scope industrial forecasting framework based on time-series data analytics” and in general is an application which:</p>
+            <ul class="circle">
+                <li>
+                  introduces the Political-Economic-Social-Technological-Ecological-Legal (PESTEL) analysis on the European continent
+                </li>
+                <li>
+                    provides familiarization with the PESTEL analysis indicators and the countries to which they refer
+                </li>
+                <li>
+                    offers the opportunity to conduct analysis on their statistics, through their time-series inspection and comparison
+                </li>
+                <li>
+                    delivers predictions to these countries, taking into regard each country's overall indicators as a multivariate approach
+                </li>
+                <li>
+                    conducts as well, predictions to individual indicators, taking into regard other countries as a multivariate approach
+                </li>
+            </ul>
+            <p>Currently the data has been extracted from major international websites-databases (e.g. WorldBank.com and Eurostat) for the countries displayed in <a href="#" >Map</a> page.
+                The PESTEL indicators, which can be explored in the <a href="#" >PESTEL analysis</a> page, for the above countries where selected with regard their influence on each other (Spearman's correlation coefficient) and their
+                degree of reflecting a country's macro-environmental status. You can conduct analysis and predictions for each individual country or indicator separately by selecting them from the navigation bar, the above two other pages, or from the panel in
+                the <a href="#" >Charts</a> page. We will hopefully add more features and case-studies to broaden the range and the variety of data gained and provided.</p>
+            <p>If you have any questions regarding the data gathered, suggestions about making statistics more accurate or simply want to contact us, please send us your <a href="{{ url_for('feedback_page') }}" data-reveal-id="feedbackModal">feedback</a></p>
+    </div>
+
+    {% include "footer.html" %}
+
+    <script>
+        const countries = {{ countries | tojson }}
+        const indicators = {{ indicators | tojson}}
+        const lineUrl = "{{ url_for('plots.plot_line_chart' ) }}";
+        const navUrl = "{{ url_for('nav.get_countries_indicators' ) }}";
+        const pestelUrl = "{{ url_for('pie.get_pestel' ) }}";
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/navBar_scripts.js') }}"></script>
+
+</body>
+</html>

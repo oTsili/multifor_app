@@ -1,0 +1,86 @@
+<div class="upper-grid">
+    <div class="chart-container">
+        <div id='myDiv'><!-- Plotly time-series chart --></div>
+    </div>
+    <div class="table-container">
+        <div id="table_div"><!--  table --></div>
+    </div>
+</div>
+<div class="lower-grid">
+
+    <div class="form-container">
+        <div class="update-form">
+            <div class="switch-col">
+                <label class="labels" id="lbl_reverse" for="switch_btn">Switch</label>
+                <button class="btn" id="switch_btn">
+                    <ion-icon class="icon-small" name="sync-circle"></ion-icon>
+                </button>
+            </div>
+            <div class="select-elements">
+                <div class="table-name-col">
+                    <label class="labels" id="lbl_table"  for="tbl_name">Table</label>
+                    <select class="btn" name="table_name" id="tbl_name" ></select>
+                </div>
+                <div class="column-name-col">
+                    <label class="labels" id="lbl_col"  for="cl_name">Columns</label>
+                    <select class="btn" name="column_name" id="cl_name"></select>
+                </div>
+            </div>
+            <div class="submit-col">
+                <label class="labels" id="lbl_update" for="update_btn">Submit</label>
+                <button  class="btn" id="update_btn">
+                    <ion-icon class="icon-small" name="checkmark-circle"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="num-of-cols-container">
+        <div class="num-of-cols-form">
+            <div class="date-col">
+                <label class="labels" id="lbl_date" for="btn_add_year">Date&#47;Year</label>
+                <button class="btn" id='btn_remove_year'>
+                    <ion-icon class="icon-small" name="remove-circle"></ion-icon>
+                </button>
+                <button class="btn" id='btn_add_year' >
+                    <ion-icon class="icon-small" name="add-circle"></ion-icon>
+                </button>
+
+            </div>
+            <div class="next-col">
+                <label class="labels" id="lbl_col_select"  for="add_rem_select">Next&nbsp;Column</label>
+                <select class="btn" name="table_name" id="add_rem_select" ></select>
+            </div>
+            <div class="column-col">
+                <label class="labels" id="lbl_col_submit" for="btn_add_col">Column</label>
+                <button class="btn" id='btn_remove_col'>
+                    <ion-icon class="icon-small" name="remove-circle"></ion-icon>
+                </button>
+                <button class="btn" id='btn_add_col' >
+                    <ion-icon class="icon-small" name="add-circle"></ion-icon>
+                </button>
+            </div>
+        </div>
+{#    <div class="yearBtn-container">#}
+{#        <button class="btn" id='btn_add_year' >#}
+{#            <ion-icon class="icon-small" name="add-circle"></ion-icon>#}
+{#        </button>#}
+{#         <button class="btn" id='btn_remove_year'>#}
+{#            <ion-icon class="icon-small" name="remove-circle"></ion-icon>#}
+{#        </button>#}
+{#    </div>#}
+{#    <div class="clmBtns">#}
+{#        <button class="btn" id='btn_remove_col'>#}
+{#            <ion-icon class="icon-small" name="remove-circle"></ion-icon>#}
+{#        </button>#}
+{#         <button class="btn" id='btn_add_col' >#}
+{#            <ion-icon class="icon-small" name="add-circle"></ion-icon>#}
+{#        </button>#}
+{#    </div>#}
+{#    <div class="add-msg" >#}
+{#        <div class="alert" id="no_result">#}
+{#          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>#}
+{#          <span id="msg"></span>#}
+{#        </div>#}
+{#    </div>#}
+    </div>
+</div>
