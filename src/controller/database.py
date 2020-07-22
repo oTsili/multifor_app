@@ -11,13 +11,13 @@ def reverse_list(lst):
 
 
 class Database:
-    URI = "mongodb://127.0.0.1:27017/pestel"
+    URI = "mongodb://127.0.0.1:27017/multifor"
     DATABASE = pymongo.MongoClient(URI).get_default_database()
 
     @staticmethod
     def initialize():
         client = pymongo.MongoClient(Database.URI)
-        Database.DATABASE = client['pestel']
+        Database.DATABASE = client['multifor']
 
     @staticmethod
     def get_collections():
