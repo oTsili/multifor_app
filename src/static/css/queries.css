@@ -444,19 +444,17 @@
         font-size: 50%!important;
     }
 
-    .footer-nav li,
-    .social-links li {
+    .footer-nav li {
         margin-left: 0!important;
     }
 
-    .site-map-column,
-    .social-links-column{
+    .site-map-column{
        margin-left:-7%!important;
     }
 
 
 
-    .footer-nav li, .social-links li {
+    .footer-nav li {
         display: inline-block;
         margin-right: 10px;
     }

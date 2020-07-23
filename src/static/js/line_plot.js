@@ -56,8 +56,6 @@ const resizeChartContainer = () => {
     //window size//
     let winWidth = $(window).innerWidth();
     let winHeight = $(window).innerHeight();
-    console.log(winWidth);
-    console.log(winHeight);
     // resize the chart and the table with regard the window size
     let layout;
     if (winWidth > 1024) {
@@ -330,10 +328,10 @@ const getPredicted = (selectedTable, url, lastYear, cols, dates, col_sel) => {
         success: function(data){
             let columns = data['columns'];
             columns = JSON.parse(columns);
-            drawThePage(data, columns, dates, display);
+            drawThePage(data, columns, dates);
         },
         error: function (xhr, status) {
-            // window.location.replace(error500Html);
+            window.location.replace(error500Html);
             console.log(xhr, status);
         }
     }).done( () => {
@@ -393,8 +391,6 @@ const changeRowsColumns = (url, type, add) => {
             dates = JSON.parse(dates);
             let columns = data['columns'];
             columns = JSON.parse(columns);
-            const dfTotalLength = data['df_length'];
-            // const df_index_length = data['df_index_length'];
 
             const remaining_cols = data['remaining_cols'];
             // conditions to check if there are any columns or rows left to add
@@ -440,7 +436,7 @@ const changeRowsColumns = (url, type, add) => {
             }
         },
         error: function (xhr, status) {
-            // window.location.replace(error500Html);
+            window.location.replace(error500Html);
             console.log(xhr);
             console.log(status);
         }
@@ -503,7 +499,7 @@ const initialize_page = (url, table, selectUrl,  column) => {
             return data;
             },
             error: function (xhr, status) {
-                // window.location.replace(error404Html);
+                window.location.replace(error404Html);
                 console.log(xhr);
                 console.log(status);
             }

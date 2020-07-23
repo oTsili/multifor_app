@@ -216,6 +216,18 @@ nav ul {
     float:left;
 }
 
+
+.datalabs-column{
+    grid-column: 2;
+}
+
+.datalabs-column > a > img{
+    width:15%;
+    float:right;
+    height:100%;
+    margin-right: 3%;
+}
+
 .mobile-nav-icon {
     grid-row:1;
     float:right;
@@ -764,10 +776,6 @@ footer {
     /*display:grid;*/
     /*grid-template-columns: 1fr 1fr;*/
 }
-.social-links-column {
-    grid-column: 2;
-    margin-right: 5%;
-}
 
 .site-map{
     display:grid;
@@ -803,27 +811,19 @@ footer {
 }
 
 
-.social-links {
-    list-style: none;
-    float: right;
-}
 
-.footer-nav li,
-.social-links li {
+.footer-nav li {
     display: inline-block;
     margin-right: 20px;
 }
 
 
-.footer-nav li:last-child,
-.social-links li:last-child {
+.footer-nav li:last-child {
     margin-right: 20px;
 }
 
 .footer-nav li a:link,
-.footer-nav li a:visited ,
-.social-links li a:link,
-.social-links li a:visited {
+.footer-nav li a:visited  {
     text-decoration: none;
     border: 0;
     color: #444444;
@@ -835,10 +835,7 @@ footer {
     color: rgb(33, 128, 152);
 }
 
-.social-links li a:link,
-.social-links li a:visited {
-    font-size: 160%;
-}
+
 #facebook,
 #twitter,
 #snapchat,
