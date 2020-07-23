@@ -104,6 +104,16 @@
 
 @media only screen and (max-width: 890px){
 
+
+    .spinner-msg {
+        margin-left:-8%;
+    }
+
+
+    .blinking {
+        margin-left: -7%;
+    }
+
     .mobile-nav-icon{
         display: block;
         font-size: 38px !important;
@@ -321,6 +331,9 @@
         width: 40%;
     }
 
+    .blinking {
+        margin-left: -7%;
+    }
 
     .update-form-container {
         margin-left: 0!important;

@@ -84,7 +84,7 @@ class Database:
         # if alias:
         #     df = replace_indicator_names(df, columns=True)
         if scaling:
-            df, min_max_scaler, nanColumns = scale(df)
+            df, min_max_scaler = scale(df)
 
         df['date'] = df.index
         column_names = ['date']

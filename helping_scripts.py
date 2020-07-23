@@ -58,7 +58,7 @@ for country in countries_list:
     Database.csv_to_mogodb(country, f'{path_file}/{country}.csv', scaling=True, alias=True)
 
 
-path_file = '../src/indicators'
+path_file = 'src/indicators/'
 
 for indicator, alias in indicators.items():
     print(alias)
