@@ -105,13 +105,13 @@
 @media only screen and (max-width: 890px){
 
 
-    .spinner-msg {
-        margin-left:-8%;
+    .loader{
+        padding-left:40%;
+        padding-top: 50%!important;
     }
 
-
     .blinking {
-        margin-left: -7%;
+    margin-left: -12%;
     }
 
     .mobile-nav-icon{
@@ -331,8 +331,8 @@
         width: 40%;
     }
 
-    .blinking {
-        margin-left: -7%;
+    .loader{
+        padding-left:35%;
     }
 
     .update-form-container {
