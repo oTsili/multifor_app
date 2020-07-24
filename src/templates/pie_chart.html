@@ -64,6 +64,8 @@
         const lineUrl = "{{ url_for('plots.plot_line_chart' ) }}";
         const navUrl = "{{ url_for('nav.get_countries_indicators' ) }}";
         const pestelUrl = "{{ url_for('pie.get_pestel' ) }}";
+        const error404Html = "{{ url_for('error_page', code = "404") }}";
+        const error500Html = "{{ url_for('error_page', code = "500") }}";
     </script>
      <script type="text/javascript" src="{{ url_for('static', filename='js/navBar_scripts.js') }}"></script>
      <script type="text/javascript" src="{{ url_for('static', filename='js/pestel_pie.js') }}"></script>

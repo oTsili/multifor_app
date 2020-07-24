@@ -160,7 +160,7 @@ const getIndicators = (url) => {
             }
         },
         error: function (xhr, status) {
-            alert("error");
+            window.location.replace(error500Html);
             console.log(xhr);
             console.log(status);
         }
