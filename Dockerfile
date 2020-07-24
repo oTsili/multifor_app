@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.6.9
 COPY . /app/
 WORKDIR /app
 RUN wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | \
