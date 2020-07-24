@@ -214,7 +214,7 @@ const columnChangeHandler = (selectedTable, url, column=columns) => {
         },
         error: function (xhr, status) {
             console.log(xhr, status);
-            // window.location.replace(error500Html);
+            window.location.replace(error500Html);
         }
     }).done( () => {
         clearLoader();
@@ -253,7 +253,7 @@ const tableChangeHandler = (selectedTable, url, column=columns) => {
         },
         error: function (xhr, status) {
             console.log(xhr, status);
-            // window.location.replace(error500Html);
+            window.location.replace(error500Html);
         }
     }).done( () => {
         clearLoader();
@@ -499,7 +499,7 @@ const initialize_page = (url, table, selectUrl,  column) => {
             return data;
             },
             error: function (xhr, status) {
-                window.location.replace(error404Html);
+                window.location.replace(error500Html);
                 console.log(xhr);
                 console.log(status);
             }
