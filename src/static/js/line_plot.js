@@ -216,7 +216,7 @@ const columnChangeHandler = (selectedTable, url, column=columns) => {
             console.log(xhr, status);
             window.location.replace(error500Html);
         }
-    }).done( () => {
+    }).done( () => {sudo
         clearLoader();
     })
 };

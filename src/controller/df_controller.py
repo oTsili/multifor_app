@@ -28,10 +28,8 @@ def get_df(name, dates_updated):
 
     if not dates_updated:
         dates = [f'{x}-01-01' for x in range(2005, 2019)]
-        df = Database.from_mongodb_df('dataframes', {'index': name})
-        df = df.reset_index(drop=True)
-        df = df.set_index('date', drop=False)
-        df = df.reindex(dates)
+        df = Database.from_mongodb_df('dataframes', {'index': name}).reset_index(drop=True)\
+            .set_index('date', drop=False).reindex(dates)
         df['date'] = df.index
     else:
         df = Database.from_mongodb_df('dataframes', {'index': name})

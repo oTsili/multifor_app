@@ -24,9 +24,9 @@ def after_request(response):
 
 @app.route("/error/<string:code>", methods=["GET"])
 def error_page(code):
-    if code == "404":
+    if code == 404 or code == '404':
         return render_template("error_404.html")
-    elif code == "500":
+    elif code == 500 or code == '500':
         return render_template("error_500.html")
 
 

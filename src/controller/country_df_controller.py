@@ -29,10 +29,8 @@ def transpose_df(indicators, dates, country_name):
     for indicator in indicators:
         if indicator != indicators[idx]:
             # get from mongodb, set index the dates & keep only the ones between (2005,2018) or until the year predicted
-            indicator_df = Database.from_mongodb_df('dataframes', {'index': indicator})
-            indicator_df = indicator_df.reset_index(drop=True)
-            indicator_df = indicator_df.set_index('date', drop=True)
-            indicator_df = indicator_df.reindex(dates)
+            indicator_df = Database.from_mongodb_df('dataframes', {'index': indicator}).reset_index(drop=True)\
+                .set_index('date', drop=True).reindex(dates)
 
             if country_name in indicator_df.columns:
                 indicator_df = indicator_df[country_name]
