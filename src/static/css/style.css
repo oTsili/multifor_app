@@ -14,45 +14,35 @@ body {
 }
 /***************** NAVIGATION BAR ********************/
 
-header{
-    display:inline-block;
-    grid-row: 1;
-    grid-column: 1/-1;
-    width:100%;
-}
-
 header .main-header {
-    height: 15%;
-    display:inline-block;
-    padding-right: 2%;
+     display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 .main-header h1.small-header {
     padding-left:18%;
     color: #555;
-    /*position:relative;*/
+    position:relative;
     float:left;
-    /*width:90%;*/
 }
 
 .main-header h1.large-header {
-    padding-left: 9%;
     color: #555;
-    /*position:relative;*/
+    position:relative;
     float:left;
-    /*font-size: 70%;*/
 }
 
 /******* NAV FUNCTIONALITY ***************/
 nav {
   display: inline-block;
     float: right;
-  /* text-align: center; */
 }
 
 .plots ul{
     height:200px;
-    /*width: 18px;*/
 }
 
 .plots ul{
@@ -71,12 +61,10 @@ nav ul {
     display: inline-block;
     box-shadow: 1px -1px 1px 1px #555, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;
     margin-top: -10%;
-  /* border-radius:6px; */
 }
 
 .main-nav a {
   display: block;
-   /*background: rgba(158, 158, 158, 0.37);*/
   color: #555;
   text-decoration: none;
   padding: 0.8em 1.8em;
@@ -101,10 +89,8 @@ nav ul {
 }
 .main-nav > li > a {
   margin-bottom: 1px;
-  /* box-shadow:inset 0 2.7em .50em -.5em #555;  */
 }
-/* .namain-nav > li:hover , .nav > li:hover >a{  border-bottom-color:orange;} */
-/* .main-nav li:hover > a { color:orange; } */
+
 .main-nav > li:first-child {
   border-radius: 4px 0 0 4px;
 }
@@ -125,10 +111,7 @@ nav ul {
 .main-nav li a:link,
 .main-nav li a:visited {
   color: #555;
-  /* text-decoration: none; */
   text-transform: uppercase;
-   /*font-size: 60%;*/
-  /*border-bottom: 2px solid transparent;*/
   transition: border-bottom 0.2s;
 }
 .main-nav li a:hover,
@@ -150,11 +133,8 @@ nav ul {
 .main-nav li ul li a:hover,
 .main-nav li ul li a:active {
     color: #fff;
-    /*font-size: 70%;*/
     border-bottom: 2px solid #fff;
 }
-
-
 
 .main-nav li a:first-child:nth-last-child(2):before {
   content: "";
@@ -185,7 +165,6 @@ nav ul {
 }
 
 .main-nav > li li:hover > ul {
-  /* margin-left: 1px */
   left: 100%;
   top: -1px;
 }
@@ -239,26 +218,23 @@ nav ul {
 
 /*****************MAP EUROPE********************/
 body .map-container {
-    /*width: 100%;*/
-    height: 66%;
+    width: 90%;
+    height:70%;
+    position: relative;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-/*.map-container,*/
 body,
-html
-{
-    /*display:inline-block;*/
+html {
     height: 100%;
 }
 
 .map-container #chartdiv {
-  width: 100%;
-  height: 80%;
-  padding: 0 0 0 0;
-}
-
-.map-container{
-    margin-right: 10%
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
 }
 
 /********* GOOGLE TABLE ******************/
@@ -287,7 +263,9 @@ td:first-of-type {
     width: 90%;
     height:70%;
     position: relative;
-    float: left;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .left-col{
@@ -298,20 +276,12 @@ td:first-of-type {
     position: absolute;
     width: 60% !important;
     left: 25%;
-    /*height: 90%;*/
-    /*margin-top: -60px;*/
 }
 
 .right-col{
     float:right;
 }
 
-#container {
-    height:80%;
-}
-.main-header.pestel-container {
-    height: 80%;
-}
 
 #container {
 	height: 100%;
@@ -354,50 +324,30 @@ td:first-of-type {
 
 /*********** INDICATOR TABLES POP UP PIE ******************/
 .pestel-indicators{
-    /*width: 20%!important;*/
     animation-duration: 1s;
     text-align: center;
     display: none;
     z-index:9999;
     position:relative;
-
 }
-
 
 .first-indicator {
     margin: 1% 5% 0 5%;
 }
 
 .second-indicator {
-    margin: 68% 5% 0 5%;
+    margin: 68% 5% 0 -35%;
 }
 
 .third-indicator {
-    margin: 200% 5% 0 5%;
-}
-
-.right-col > .third-indicator{
-    margin-top: 110%;
+    margin: 150% 5% 0 5%;
 }
 
 .right-col > .third-indicator,
+.right-col > .second-indicator,
 .right-col > .first-indicator{
-    margin-left:-75%!important;
-}
-
-.right-col > .second-indicator{
-    margin-left:15%!important;
-}
-
-.left-col > .second-indicator{
     margin-left:75%!important;
 }
-
-.left-col > .third-indicator,
-.left-col > .first-indicator{
-    margin-left:150%!important;
-}
-
 
 .left {
     float:left;
@@ -406,16 +356,13 @@ td:first-of-type {
 .right {
     float:right;
     display:grid;
-    /*align-self: flex-end;*/
     justify-self: right;
     margin-top:4%
 }
 
-
 .visible {
     display: inline-block;
 }
-
 
 a,
 a label {
@@ -439,15 +386,14 @@ a label {
 
 
 /*************UPPER LINE CHART-TABLE***********************/
-.upper{
-    display: table-row;
-}
-/*************UPPER LINE CHART-TABLE***********************/
 .upper-grid{
-    grid-row: 1;
-    display: inline-block;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr;
+
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    flex: 1 1 calc(33% - 2em);
+    align-content: flex-end;
 }
 
 
@@ -458,10 +404,12 @@ a label {
 
 /*************LOWER LINE CONTROL PANELS***********************/
 .lower-grid{
-    grid-row:2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin:-2% 0 1% 0;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-content: flex-end;
+    margin-bottom: 2%;
 }
 
 
@@ -472,15 +420,14 @@ a label {
 }
 
 .chart-page-container {
-    display:grid;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .chart-container {
+    align-self:flex-start;
 
-    margin: -1.1% 0 0 5% ;
-    /*height: 30%;*/
-
-    float:left;
 }
 
 .plot-container.plotly{
@@ -490,12 +437,10 @@ a label {
 
 /************* YEAR BTNS ***********************/
 .yearBtn-container {
-    /*display:inline-block;*/
     float: left;
     width: 5%;
     margin: 450% 0 0 20%;
-    /*grid-column:2;*/
-    /*grid-row:1;*/
+
 }
 
 .clmBtns {
@@ -504,10 +449,6 @@ a label {
 
 
 /*************TIME-SERIES TABLE ***********************/
-.table-container {
-    float: left;
-    margin: -1% 2% 0 5%;
-}
 
 #table_div{
     max-width: 37%;
@@ -520,8 +461,6 @@ html>body tbody.scrollContent {
     display: block;
     height: 100%;
     table-layout: fixed;
-    /*font-family: Helvetica, Palatino, Arial, sans-serif;*/
-    /*font-size: 0.8em;*/
     overflow:auto;
     position:relative;
 }
@@ -533,26 +472,21 @@ html>body tbody.scrollContent {
 
 
 /********** PLOT UPDATER FORM ********************/
-.update-form-container{
-    display: block;
-    width: 90%;
-    padding: 0 0 2% 15%;
-    margin-top:5%!important;
-}
-
-
 .update-form {
-    display: table;
     background-color: rgba(85, 85, 85, 0.34);
     border-radius: 20px;
-    height: 80%;
-    width: 70%;
-    align-self: end;
-    justify-self: end;
-    margin-top: 5%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+
 }
 
-
+.update-form > div {
+    margin: 10px;
+}
 /**********both controllers *********/
 
 .upper > .btn,
@@ -565,19 +499,19 @@ html>body tbody.scrollContent {
 
 
 /**********right controller*********/
-.num-of-cols-container{
-    float:left;
-    margin-top:5%!important;%;
-    /*width: 50%;*/
+.num-of-cols-form {
+    background-color: rgba(85, 85, 85, 0.34);
+    border-radius: 20px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+
 }
 
-.num-of-cols-form {
-    display:table;
-    background-color: rgba(85, 85, 85, 0.34);
-    width: 60% !important;
-    height: 65%;
-    border-radius: 20px;
-    padding-left:2%
+.num-of-cols-form > div {
+    margin: 10px;
 }
 
 .date-col{
@@ -596,38 +530,79 @@ html>body tbody.scrollContent {
 
 #lbl_col_select{
     padding-left: 15%;
+    display:table-row;
+}
+
+
+#lbl_col_submit{
+    display:table-row;
+}
+
+#lbl_date{
+    display:table-row;
 }
 
 /**********left controller**********/
 .switch-col{
-    display:table-cell;
-    padding-left:3%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+
 }
 
 .table-name-col{
-    display:table-cell;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 
 .column-name-col{
-    display:table-cell;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 
 .submit-col{
-    display:table-cell;
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.select-elements{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 #lbl_table{
     padding-left:25%;
+    display:table-row;
 }
 
 #lbl_col{
     padding-left: 25%;
+    display:table-row;
 }
 
 #lbl_update{
     margin-left: -15%;
+    display:table-row;
+}
+
+#lbl_reverse{
+    display:table-row;
 }
 
 #tbl_name{
@@ -646,8 +621,6 @@ input[type=submit] {
     font-weight: 300;
     text-decoration: none;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
-    /*border: 1px solid #e67e22;*/
-    /*color:#e67e22;*/
     border-bottom: 2px solid rgb(30, 147, 152);
     color: rgb(30, 147, 152);
     cursor: pointer;
@@ -657,9 +630,6 @@ input[type=submit] {
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    /*background-color: #fff;*/
-    /*border: 1px solid #cf6d17;*/
-    /*color:#cf6d17;*/
     border-bottom: 2px solid rgb(30, 147, 152);
     color: rgb(30, 147, 152);
     cursor: pointer;
@@ -687,17 +657,11 @@ input[type=submit]:active {
     width: 30px;
     text-align: center;
     font-size: 200%;
-    /*align text and icons*/
     line-height: 120%;
     vertical-align: middle;
     transition: background-color 0.2s, color 0.2s;
 }
 
-
-/*.icon-small:hover,*/
-/*.icon-small:active {*/
-/*    color:rgb(30, 147, 152);*/
-/*}*/
 
 .col.span-2-of-10 {
     text-align: center;
@@ -713,7 +677,6 @@ input[type=submit]:active {
 
 #year_btns{
     width: 3%;
-    /*padding-top: 27%;*/
 }
 
 /* The alert message box */
@@ -760,11 +723,6 @@ footer {
     position:relative;
     background-color: #a3d8e4;
     font-size: 80%;
-    display: inline-block;
-    width: 100%;
-    /*grid-column:1 / -1;*/
-    /*grid-row:4;*/
-    /*padding-top: 10px;*/
 }
 
 .feedback-page footer {
@@ -772,14 +730,15 @@ footer {
 }
 
 .footer-container {
-    display: block;
-    /*display:grid;*/
-    /*grid-template-columns: 1fr 1fr;*/
+     display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 .site-map{
     display:grid;
-    /*grid-column:1/-1;*/
 }
 
 .site-map-column {
@@ -856,7 +815,6 @@ footer {
 footer p {
     color: #444444;
     text-align: center;
-    /*margin-top: 5px;*/
 }
 /*********** SPINNER LOADER SMALL *****************/
 
@@ -879,13 +837,7 @@ footer p {
     content:'';
     display:block;
     position:absolute;
-    /*left:48%;top:40%;*/
-    /*width:40px;height:40px;*/
-    /*border-style:solid;*/
-    /*border-color:#a3d8e4;*/
     border-top-color:transparent;
-    /*border-width: 4px;*/
-    /*border-radius:50%;*/
     -webkit-animation: spin .8s linear infinite;
     animation: spin .8s linear infinite;
 }

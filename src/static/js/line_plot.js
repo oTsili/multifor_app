@@ -61,7 +61,7 @@ const resizeChartContainer = () => {
     if (winWidth > 1024) {
         layout = {
             autosize: true,
-            width: 550,
+            width: 750,
             height: 350,
             margin: {
                 l: 50,
@@ -72,11 +72,11 @@ const resizeChartContainer = () => {
             }
         };
         elements.table.attr('max-width', '37%');
-        elements.chartContainer.attr("width", "50%");
-    } else if (winWidth > 890 && winWidth <= 1024) {
+        // elements.chartContainer.attr("width", "50%");
+    } else if (winWidth > 870 && winWidth <= 1024) {
         layout = {
             autosize: true,
-            width: 450,
+            width: 520,
             height: 350,
             margin: {
                 l: 50,
@@ -86,10 +86,10 @@ const resizeChartContainer = () => {
                 pad: 4
             }
         };
-        elements.table.attr('max-width', '37%');
-        elements.chartContainer.attr("width", "50%");
-        elements.chartContainer.attr("margin-left", "0");
-        elements.add_rem_container.attr('width', "64%");
+        // elements.table.attr('max-width', '90%');
+        // elements.chartContainer.attr("width", "50%");
+        // elements.chartContainer.attr("margin-left", "0");
+        // elements.add_rem_container.attr('width', "64%");
     } else if (winWidth > 627 && winWidth <= 890) {
         layout = {
             autosize: true,
@@ -103,7 +103,7 @@ const resizeChartContainer = () => {
                 pad: 4
             }
         };
-        elements.chartContainer.attr("margin-left", "10%!important");
+        // elements.chartContainer.attr("margin-left", "10%!important");
     }else if (winWidth > 415 && winWidth <= 627) {
         layout = {
             autosize: true,
@@ -216,7 +216,7 @@ const columnChangeHandler = (selectedTable, url, column=columns) => {
             console.log(xhr, status);
             window.location.replace(error500Html);
         }
-    }).done( () => {sudo
+    }).done( () => {
         clearLoader();
     })
 };
