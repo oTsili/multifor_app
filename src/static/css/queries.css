@@ -36,8 +36,8 @@
         font-size: 160%;
     }
 
-    .cssHeaderCell,
-    .cssTableCell{
+    .pestel-indicators.cssHeaderCell,
+    .pestel-indicators.cssTableCell{
         font-size: 70%;
     }
 }
@@ -62,7 +62,6 @@
         display: block;
         font-size: 38px !important;
         justify-self: end;
-
     }
 
     .main-nav{
@@ -77,27 +76,27 @@
     .main-nav a {
         background: rgba(158, 158, 158, 0.37);
         padding: 0.8em 1.4em!important;
-
+        font-size: 60%;
     }
-
 
     .main-nav ul {
         padding-left: 5%;
+        border-bottom: 0 solid #555;
     }
 
     .main-nav > li:hover > ul {
         right: 100%;
         left: auto;
+        top: 0;
+        bottom:auto;
     }
 
     .main-nav li a:first-child:nth-last-child(2):before {
-
         left: 5px;
         right: auto;
     }
 
     .main-nav li li:hover > a:first-child:nth-last-child(2):before {
-
         left : 2px;
         right:  auto;
     }
@@ -176,6 +175,12 @@
 
     .datalabs-column > a > img {
         width: 35%;
+    }
+
+    .right-col > .third-indicator,
+    .right-col > .second-indicator,
+    .right-col > .first-indicator{
+        margin-left:475%!important;
     }
 
 }

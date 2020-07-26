@@ -11,6 +11,8 @@ body {
   /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
     font-family: 'Nunito Sans', sans-serif;
     width: 100%;
+    display:flex;
+    flex-direction: column;
 }
 /***************** NAVIGATION BAR ********************/
 
@@ -265,7 +267,7 @@ td:first-of-type {
     position: relative;
     display:inline-flex;
     flex-direction: row;
-    justify-content: space-around;
+    /*justify-content: center;*/
 }
 
 .left-col{
@@ -274,8 +276,8 @@ td:first-of-type {
 
 .pestel-pie{
     position: absolute;
-    width: 60% !important;
-    left: 25%;
+    justify-self: center;
+    top: 0; right: 0; bottom: 0; left: 0;
 }
 
 .right-col{
@@ -332,21 +334,21 @@ td:first-of-type {
 }
 
 .first-indicator {
-    margin: 1% 5% 0 5%;
+    margin: 1% 5% 0 95%;
 }
 
 .second-indicator {
-    margin: 68% 5% 0 -35%;
+    margin: 68% 5% 0 85%;
 }
 
 .third-indicator {
-    margin: 150% 5% 0 5%;
+    margin: 140% 5% 0 95%;
 }
 
 .right-col > .third-indicator,
 .right-col > .second-indicator,
 .right-col > .first-indicator{
-    margin-left:75%!important;
+    margin-left:575%!important;
 }
 
 .left {
