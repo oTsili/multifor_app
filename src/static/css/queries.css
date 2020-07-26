@@ -192,6 +192,11 @@
 
 @media only screen and (max-width: 570px) {
 
+    .update-form,
+    .num-of-cols-form{
+        font-size: 60%;
+    }
+
     .datalabs-column > a > img {
         width: 45%;
     }
