@@ -177,6 +177,7 @@
 
 @media only screen and (max-width: 668px) {
 
+
     .datalabs-column > a > img {
         width: 35%;
     }
@@ -285,4 +286,15 @@
         display: inline-block;
         margin-right: 10px;
     }
+}
+
+
+
+@media only screen and (max-height: 670px) {
+    .pestel-container {
+        height: 100%;
+        padding-bottom: 65%;
+    }
+
+
 }
