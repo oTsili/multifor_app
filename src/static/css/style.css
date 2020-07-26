@@ -38,8 +38,9 @@ header .main-header {
 
 /******* NAV FUNCTIONALITY ***************/
 nav {
-  display: inline-block;
+    display: inline-block;
     float: right;
+    z-index:9999;
 }
 
 .plots ul{
@@ -62,7 +63,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    box-shadow: 1px -1px 1px 1px #555, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;
+    /*box-shadow: 1px -1px 1px 1px #555, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;*/
     margin-top: -10%;
 
 }
@@ -168,7 +169,7 @@ nav ul {
   z-index: 1;
   left: -99999em;
 }
-.main-nav > li:hover > ul {
+ul.main-nav > li:hover > ul {
   left: auto;
   padding-top: 5px;
   min-width: 100%;
@@ -178,24 +179,24 @@ nav ul {
   background: rgb(30, 147, 152);
 }
 
-.main-nav > li li:hover > ul {
+ul.main-nav > li li:hover > ul {
   left: 100%;
   top: -1px;
 }
 /* arrow hover styling */
-.main-nav > li > a:first-child:nth-last-child(2):before {
+ul.main-nav > li > a:first-child:nth-last-child(2):before {
   border-top-color: #aaa;
 }
-.main-nav > li:hover > a:first-child:nth-last-child(2):before {
+ul.main-nav > li:hover > a:first-child:nth-last-child(2):before {
   border: 5px solid transparent;
   border-bottom-color: #00d9ff;
   margin-top: -5px;
 }
-.main-nav li li > a:first-child:nth-last-child(2):before {
+ul.main-nav li li > a:first-child:nth-last-child(2):before {
   border-left-color: #aaa;
   margin-top: -5px;
 }
-.main-nav li li:hover > a:first-child:nth-last-child(2):before {
+ul.main-nav li li:hover > a:first-child:nth-last-child(2):before {
   border: 5px solid transparent;
   border-right-color: #00d9ff;
   right: 10px;
