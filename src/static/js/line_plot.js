@@ -72,7 +72,6 @@ const resizeChartContainer = () => {
             }
         };
         elements.table.attr('max-width', '37%');
-        // elements.chartContainer.attr("width", "50%");
     } else if (winWidth > 870 && winWidth <= 1024) {
         layout = {
             autosize: true,
@@ -86,11 +85,7 @@ const resizeChartContainer = () => {
                 pad: 4
             }
         };
-        // elements.table.attr('max-width', '90%');
-        // elements.chartContainer.attr("width", "50%");
-        // elements.chartContainer.attr("margin-left", "0");
-        // elements.add_rem_container.attr('width', "64%");
-    } else if (winWidth > 627 && winWidth <= 890) {
+    } else if (winWidth > 800 && winWidth <= 890) {
         layout = {
             autosize: true,
             width: 550,
@@ -101,10 +96,15 @@ const resizeChartContainer = () => {
                 b: 100,
                 t: 100,
                 pad: 4
+            },
+            font: {
+            family: 'Courier New, monospace',
+            size: 14,
+            color: '#7f7f7f'
             }
+
         };
-        // elements.chartContainer.attr("margin-left", "10%!important");
-    }else if (winWidth > 415 && winWidth <= 627) {
+    }else if (winWidth > 415 && winWidth <= 800) {
         layout = {
             autosize: true,
             width: 450,

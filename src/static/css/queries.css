@@ -66,7 +66,7 @@
 
     .main-nav{
         border:0;
-        float: right;
+        flex-direction: column;
     }
 
     .main-nav > li {
@@ -76,7 +76,12 @@
     .main-nav a {
         background: rgba(158, 158, 158, 0.37);
         padding: 0.8em 1.4em!important;
-        font-size: 60%;
+    }
+
+    .main-nav a,
+    .main-nav li ul li a:link,
+    .main-nav{
+        font-size:80%;
     }
 
     .lower-grid {
@@ -91,7 +96,7 @@
     .main-nav > li:hover > ul {
         right: 100%;
         left: auto;
-        top: 0;
+        top: -15%;
         bottom:auto;
     }
 
@@ -110,6 +115,9 @@
         left: auto;
     }
 
+    .main-nav > li > a{
+
+    }
 
     nav {
         display:none;
@@ -121,15 +129,13 @@
 @media only screen and (max-width: 870px) {
     .cssHeaderCell,
     .cssTableCell{
-        font-size: 50%;
+        font-size: 80%;
     }
 
     .upper-grid{
-        /*flex-shrink: 1;*/
-        flex-direction: column;
+        flex-wrap: wrap;
         align-content: space-around;
         flex-basis: 100%;
-        margin-bottom: 300px;
     }
 
     #table_div{
@@ -140,17 +146,23 @@
         flex-shrink: 1;
     }
 }
-@media only screen and (max-width: 770px) {
 
-
-    .lower-grid > div {
-        margin: 10px;
+@media only screen and (max-width: 800px) {
+    #table_div{
+        max-width: 37%;
     }
+
 }
+
+
 @media only screen and (max-width: 770px) {
 
     .logo.left {
         width: 30%;
+    }
+
+    .lower-grid > div {
+        margin: 10px;
     }
 
     .left.large-header{
@@ -175,6 +187,12 @@
 
 }
 
+@media only screen and (max-width: 718px) {
+    .upper-grid{
+        flex-direction:column;
+        margin-bottom:300px;
+    }
+}
 @media only screen and (max-width: 668px) {
 
 
@@ -222,7 +240,6 @@
         /*word-break: break-all;*/
         overflow-wrap: break-word;
         max-width: 30%;
-        padding-left:20%!important;
     }
 
     .left.small-header{
@@ -259,8 +276,10 @@
 
 
 @media only screen and (max-width: 425px) {
-
-
+    .cssHeaderCell,
+    .cssTableCell{
+        font-size: 60%;
+    }
     .next-col{
         margin-left: -3%!important;
     }

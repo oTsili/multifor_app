@@ -59,10 +59,13 @@ nav ul {
 }
 
 .main-nav {
-    vertical-align: top;
-    display: inline-block;
+    /*vertical-align: top;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     box-shadow: 1px -1px 1px 1px #555, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;
     margin-top: -10%;
+
 }
 
 .main-nav a {
@@ -89,9 +92,13 @@ nav ul {
   float: left;
   margin-right: 1px;
 }
+
+
 .main-nav > li > a {
-  margin-bottom: 1px;
+    margin-bottom: 1px;
+    padding-left: 25px!important;
 }
+
 
 .main-nav > li:first-child {
   border-radius: 4px 0 0 4px;
@@ -107,7 +114,7 @@ nav ul {
   border-radius: 0 4px 0 0;
 }
 .main-nav li li a {
-  margin-top: 1px;
+  /*margin-top: 1px;*/
 }
 
 .main-nav li a:link,
@@ -125,6 +132,12 @@ nav ul {
 .plots {
     font-size: 85%;
 }
+
+.main-nav li ul li a{
+    padding-left: 25px!important;
+    top:0;
+}
+
 
 .main-nav li ul li a:link,
 .main-nav li ul li a:visited {
