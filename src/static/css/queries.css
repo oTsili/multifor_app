@@ -192,9 +192,8 @@
 
 @media only screen and (max-width: 570px) {
 
-    .update-form > li,
-    .num-of-cols-form > li{
-        font-size: 60%;
+    .lower-grid {
+        font-size: 80%;
     }
 
     .datalabs-column > a > img {
@@ -260,6 +259,11 @@
 
 
 @media only screen and (max-width: 425px) {
+
+    #table_div {
+        max-width: 80%;
+        padding-left: 10%;
+    }
 
     .select-elements {
         display: table-cell;
