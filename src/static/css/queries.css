@@ -260,6 +260,14 @@
 
 @media only screen and (max-width: 425px) {
 
+
+    .next-col{
+        margin-left: -3%!important;
+    }
+    .column-col{
+        margin-left: -2%!important;
+    }
+
     #table_div {
         max-width: 80%;
         padding-left: 10%;

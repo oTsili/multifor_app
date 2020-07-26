@@ -526,14 +526,16 @@ html>body tbody.scrollContent {
     margin: 10px;
 }
 
+
+
+
 .date-col{
     display:table-cell;
     width: 50%;
 }
 .next-col{
     display:table-cell;
-    padding-right: 5%;
-}
+    }
 .column-col{
     display:table-cell;
     width: 50%;
