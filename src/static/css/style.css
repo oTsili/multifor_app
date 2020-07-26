@@ -259,6 +259,16 @@ td:first-of-type {
   background-color: rgba(158, 158, 158, 0.37);
 }
 
+
+.date-row{
+    display:flex;
+    flex-direction:row;
+}
+
+.column-row{
+    display:flex;
+    flex-direction:row;
+}
 /*************PESTEL PIE CHART***********************/
 
 .pestel-container {
