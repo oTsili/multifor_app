@@ -1,0 +1,341 @@
+
+@media only screen and (max-width: 1300px){
+
+    .main-header {
+        grid-template-columns: 0.7fr 2fr  1.5fr!important;
+    }
+
+    .main-nav a {
+        padding: 0.8em 0.8em;
+        left:auto;
+        right:0;
+    }
+}
+
+
+@media only screen and (max-width: 1139px){
+
+    .main-nav a {
+        padding: 0.8em 0.8em;
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .datalabs-column > a > img {
+        width: 20%;
+    }
+
+    footer {
+        margin-top:5%;
+    }
+
+    .left.large-header {
+        font-size: 160%;
+    }
+
+    .pestel-indicators.cssHeaderCell,
+    .pestel-indicators.cssTableCell{
+        font-size: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 890px){
+    .datalabs-column > a > img {
+        width: 25%;
+    }
+
+
+    .loader{
+        padding-left:40%;
+        padding-top: 50%!important;
+    }
+
+    .blinking {
+    margin-left: -12%;
+    }
+
+    .mobile-nav-icon{
+        display: block;
+        font-size: 38px !important;
+        justify-self: end;
+    }
+
+    .main-nav{
+        border:0;
+        flex-direction: column;
+
+    }
+
+    .main-nav > li {
+        float: none;
+        width: 70%;
+    }
+
+    .main-nav a {
+        background: rgba(158, 158, 158, 0.37);
+        padding: 0.8em 1.4em;
+    }
+
+    .main-nav > li > ul > li > ul > li{
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .main-nav a,
+    .main-nav li ul li a:link,
+    .main-nav{
+        font-size:80%;
+    }
+
+    .lower-grid {
+        font-size: 60%;
+    }
+
+    .main-nav ul {
+        padding-left: 5%;
+        border-bottom: 0 solid #555;
+    }
+
+    ul.main-nav > li:hover > ul {
+        right: 100%;
+        left: auto;
+        top: -15%;
+        bottom:auto;
+    }
+
+    .main-nav li a:first-child:nth-last-child(2):before {
+        left: 5px;
+        right: auto;
+    }
+
+    ul.main-nav li li:hover > a:first-child:nth-last-child(2):before {
+        left : 2px;
+        right:  auto;
+    }
+
+    ul.main-nav > li li:hover > ul {
+        right: 100%;
+        left: auto;
+    }
+
+
+    nav {
+        display:none;
+        margin-right: -45%;
+    }
+
+
+}
+
+@media only screen and (max-width: 870px) {
+    .cssHeaderCell,
+    .cssTableCell{
+        font-size: 80%;
+    }
+
+    .upper-grid{
+        flex-wrap: wrap;
+        align-content: space-around;
+        flex-basis: 100%;
+    }
+
+    #table_div{
+        max-width: 70%;
+    }
+
+    .lower-grid{
+        flex-shrink: 1;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #table_div{
+        max-width: 37%;
+    }
+
+}
+
+
+@media only screen and (max-width: 770px) {
+
+    .logo.left {
+        width: 30%;
+    }
+
+    .lower-grid > div {
+        margin: 10px;
+    }
+
+    .left.large-header{
+        font-size:150%
+    }
+
+    .left.small-header{
+        font-size:150%
+    }
+
+
+    header{
+        position: relative;
+        z-index: 9999;
+    }
+
+    footer{
+        position: relative!important;
+        z-index: 9999!important;
+    }
+
+
+}
+
+@media only screen and (max-width: 718px) {
+    .upper-grid{
+        flex-direction:column;
+        margin-bottom:300px;
+    }
+}
+@media only screen and (max-width: 668px) {
+
+
+    .datalabs-column > a > img {
+        width: 35%;
+    }
+
+    .right-col > .third-indicator,
+    .right-col > .second-indicator,
+    .right-col > .first-indicator{
+        margin-left:475%!important;
+    }
+
+}
+
+@media only screen and (max-width: 570px) {
+
+    .lower-grid {
+        font-size: 80%;
+    }
+
+    .datalabs-column > a > img {
+        width: 45%;
+    }
+
+
+}
+@media only screen and (max-width: 500px) {
+
+    .logo.left {
+        width: 40%;
+    }
+
+    .loader{
+        padding-left:35%;
+    }
+
+    .mobile-nav-icon{
+        font-size: 28px !important;
+    }
+
+    .left.large-header{
+        font-size: 100%;
+        word-wrap: break-word;
+        /*word-break: break-all;*/
+        overflow-wrap: break-word;
+        max-width: 30%;
+    }
+
+    .left.small-header{
+        font-size: 100%;
+        word-wrap: break-word;
+        /*word-break: break-all;*/
+        overflow-wrap: break-word;
+        max-width: 30%
+    }
+
+    .main-nav{
+        font-size: 80%;
+    }
+
+    nav{
+        grid-row:2;
+    }
+
+    .mobile-nav-icon{
+        justify-self: end;
+
+    }
+    .chart-container{
+        display: inline-block;
+        margin-left:0;
+    }
+
+
+    body .map-container {
+    height: 75%!important;
+}
+
+}
+
+
+@media only screen and (max-width: 425px) {
+    .cssHeaderCell,
+    .cssTableCell{
+        font-size: 60%;
+    }
+    .next-col{
+        margin-left: -3%!important;
+    }
+    .column-col{
+        margin-left: -2%!important;
+    }
+
+    #table_div {
+        max-width: 80%;
+        padding-left: 10%;
+    }
+
+    .select-elements {
+        display: table-cell;
+    }
+
+    .main-nav ul {
+        border-bottom: 0;
+    }
+
+    .main-nav a {
+        letter-spacing: 0;
+    }
+
+
+    footer {
+        font-size: 50% !important;
+    }
+
+    .footer-nav li {
+        margin-left: 0 !important;
+    }
+
+    .site-map-column {
+        margin-left: -7% !important;
+    }
+
+
+    .footer-nav li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+
+
+@media only screen and (max-height: 670px) {
+    .pestel-container {
+        height: 100%;
+        padding-bottom: 65%;
+    }
+
+
+}

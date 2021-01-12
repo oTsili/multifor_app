@@ -1,0 +1,39 @@
+{% block nav %}
+    <div class="main-header">
+        <img src="{{ url_for('static', filename='img/multifor-logo.png') }}" alt="DWS logo" class="logo left">
+
+        <h1 class="left {{ title_class }}">{{ table }}</h1>
+        <div class="right">
+        <a class="mobile-nav-icon js--nav-icon"><ion-icon class="icon-menu" name="menu"></ion-icon></a>
+        <nav>
+            <ul class="main-nav js--main-nav">
+                <li><a >Charts</a>
+                    <ul >
+<!--                            <li><a href="#plans">Greecep</a></li>-->
+                        <li class="plots"><a >Countries</a>
+                            <ul class="countries-list">
+<!--                                    <li><a href="#plans">Greecep</a></li>-->
+<!--                                    <li><a href="#plans">Greecep</a></li>-->
+                            </ul>
+                        </li>
+                        <li class="plots"><a >Indicators</a>
+                            <ul class="indicators-list">
+<!--                                  <li><a href="#plans">Greecep</a></li>-->
+<!--                                  <li><a href="#plans">Greecep</a></li>-->
+                            </ul>
+                        </li>
+<!--                           <li><a href="#plans">Greecep</a></li>&ndash;&gt;-->
+<!--                            <li><a href="#plans">Greecep</a></li>-->
+                    </ul>
+
+
+                </li>
+                <li><a class='btn-map' href="{{ url_for('map.europe_map') }}">Map</a></li>
+                <li><a class='btn-pestel-pie' href="{{ url_for('pie.pestel_pie') }}">PESTEL analysis</a></li>
+
+            </ul>
+        </nav>
+        </div>
+
+    </div>
+   {% endblock %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {%set table = table | replace("_", " ") %}
+    {% include "favicon.html" %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lobibox.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/queries.css') }}" />
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+<!--    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/lobibox.min.js') }}"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/spinner.js') }}"></script>
+    <title class="large-title">{{ table }}</title>
+
+</head>
+<body>
+    <header>
+        <!--  nav  -->
+        {% include "navBar.html" %}
+        <!-- End:nav   -->
+    </header>
+<div class="chart-page-container">
+    <!--  chart-page  -->
+    {% include "plots/line_form.html" %}
+    <!-- End:chart-page   -->
+
+</div>
+{% include "footer.html" %}
+
+    {% set columns=cols %}
+    <script>
+        // var urls declaration with jinja url methods
+        const table = {{ table | tojson }};
+        const countries = {{ countries | tojson }};
+        const indicators = {{ indicators | tojson}};
+        const columns = "{{ columns }}";
+        const spinnerIcon = "{{ url_for('static', filename='img/icons.svg') }}";
+        const lineUrl = "{{ url_for('plots.plot_line_chart' ) }}";
+        const selectUrl = "{{ url_for('plots.get_columns' ) }}";
+        const error404Html = "{{ url_for('error_page', code = "404") }}";
+        const error500Html = "{{ url_for('error_page', code = "500") }}";
+        const remYearUrl = "{{ url_for('plots.chart_update', type='remYear') }}";
+        const addYearUrl = "{{ url_for('plots.chart_update', type='addYear') }}";
+        const addColUrl = "{{ url_for('plots.chart_update', type='addCol') }}";
+        const remColUrl = "{{ url_for('plots.chart_update', type='remCol') }}";
+        const switchBtnUrl = "{{ url_for('plots.chart_update', type='switch') }}";
+        const updBtnUrl = "{{ url_for('plots.chart_update', type='update') }}";
+        const initialUrl = "{{ url_for('plots.get_initial', col=columns) }}";
+    </script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/navBar_scripts.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/line_plot.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,948 @@
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+body {
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+/***************** NAVIGATION BAR ********************/
+
+header .main-header {
+     display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.main-header h1.small-header {
+    color: #555;
+    position:relative;
+    float:left;
+}
+
+.main-header h1.large-header {
+    color: #555;
+    position:relative;
+    float:left;
+}
+
+/******* NAV FUNCTIONALITY ***************/
+nav {
+    display: inline-block;
+    float: right;
+    z-index:9999;
+}
+
+.plots ul{
+    height:200px;
+}
+
+.plots ul{
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav {
+    /*vertical-align: top;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*box-shadow: 1px -1px 1px 1px #555, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;*/
+    margin-top: -10%;
+
+}
+
+.main-nav a {
+  display: block;
+  color: #555;
+  text-decoration: none;
+  padding: 0.8em 1.8em;
+  text-transform: uppercase;
+  font-size: 80%;
+  letter-spacing: 2px;
+  text-shadow: 0 -1px 0 #000;
+  position: relative;
+}
+
+.main-nav > li > ul > li > a {
+  color: #555;
+  background: rgb(30, 147, 152);
+}
+
+.main-nav li {
+  position: relative;
+}
+.main-nav > li {
+  float: left;
+  margin-right: 1px;
+}
+
+
+.main-nav > li > a {
+    margin-bottom: 1px;
+    padding-left: 25px!important;
+}
+
+
+.main-nav > li:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.main-nav > li:first-child > a {
+  border-radius: 4px 0 0 0;
+}
+.main-nav > li:last-child {
+  border-radius: 0 0 4px 0;
+  margin-right: 0;
+}
+.main-nav > li:last-child > a {
+  border-radius: 0 4px 0 0;
+}
+.main-nav li li a {
+  /*margin-top: 1px;*/
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: #555;
+  text-transform: uppercase;
+  transition: border-bottom 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #00d9ff;
+  color: #00d9ff;
+}
+
+.plots {
+    font-size: 85%;
+}
+
+.main-nav li ul li a{
+    padding-left: 25px!important;
+    top:0;
+}
+
+
+.main-nav li ul li a:link,
+.main-nav li ul li a:visited {
+    color: #555;
+    font-size: 70%;
+}
+
+.main-nav li ul li a:hover,
+.main-nav li ul li a:active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.main-nav li a:first-child:nth-last-child(2):before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  top: 50%;
+  right: 5px;
+}
+
+/* submenu positioning*/
+.main-nav ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid #555;
+  z-index: 1;
+  left: -99999em;
+}
+ul.main-nav > li:hover > ul {
+  left: auto;
+  padding-top: 5px;
+  min-width: 100%;
+}
+.main-nav > li li ul {
+  border-left: 1px solid #fff;
+  background: rgb(30, 147, 152);
+}
+
+ul.main-nav > li li:hover > ul {
+  left: 100%;
+  top: -1px;
+}
+/* arrow hover styling */
+ul.main-nav > li > a:first-child:nth-last-child(2):before {
+  border-top-color: #aaa;
+}
+ul.main-nav > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent;
+  border-bottom-color: #00d9ff;
+  margin-top: -5px;
+}
+ul.main-nav li li > a:first-child:nth-last-child(2):before {
+  border-left-color: #aaa;
+  margin-top: -5px;
+}
+ul.main-nav li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent;
+  border-right-color: #00d9ff;
+  right: 10px;
+}
+
+.logo.left{
+    width: 20%;
+    height: 100%;
+    grid-column:1;
+    grid-row:1;
+    float:left;
+}
+
+
+.datalabs-column{
+    grid-column: 2;
+}
+
+.datalabs-column > a > img{
+    width:15%;
+    float:right;
+    height:100%;
+    margin-right: 3%;
+}
+
+.mobile-nav-icon {
+    grid-row:1;
+    float:right;
+    /*margin: 0 15% 0 0;*/
+    cursor: pointer;
+    display: none;
+}
+
+
+/*****************MAP EUROPE********************/
+body .map-container {
+    width: 90%;
+    height:70%;
+    position: relative;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.map-container #chartdiv {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+}
+
+/********* GOOGLE TABLE ******************/
+.cssSelectedTableRow {
+  font-size: 13px;
+  font-weight:bold;
+}
+.cssHoverTableRow {
+  background: #ccc;
+}
+
+th {
+  background-color: rgba(158, 158, 158, 0.37);
+}
+
+td:first-of-type {
+  background-color: rgba(158, 158, 158, 0.37);
+}
+td:first-of-type {
+  background-color: rgba(158, 158, 158, 0.37);
+}
+
+
+.date-row{
+    display:flex;
+    flex-direction:row;
+}
+
+.column-row{
+    display:flex;
+    flex-direction:row;
+}
+/*************PESTEL PIE CHART***********************/
+
+.pestel-container {
+    width: 90%;
+    height:70%;
+    position: relative;
+    display:inline-flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+}
+
+.left-col{
+    float:left;
+}
+
+.pestel-pie{
+    position: absolute;
+    justify-self: center;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.right-col{
+    float:right;
+}
+
+
+#container {
+	height: 100%;
+}
+
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 320px;
+    max-width: 700px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+/*********** INDICATOR TABLES POP UP PIE ******************/
+.pestel-indicators{
+    animation-duration: 1s;
+    text-align: center;
+    display: none;
+    z-index:9999;
+    position:relative;
+}
+
+.first-indicator {
+    margin: 1% 5% 0 95%;
+}
+
+.second-indicator {
+    margin: 68% 5% 0 85%;
+}
+
+.third-indicator {
+    margin: 140% 5% 0 95%;
+}
+
+.right-col > .third-indicator,
+.right-col > .second-indicator,
+.right-col > .first-indicator{
+    margin-left:575%!important;
+}
+
+.left {
+    float:left;
+}
+
+.right {
+    float:right;
+    display:grid;
+    justify-self: right;
+    margin-top:4%
+}
+
+.visible {
+    display: inline-block;
+}
+
+a,
+a label {
+    cursor: pointer;
+}
+
+.indicator-link:link,
+.indicator-link:visited {
+    text-decoration:none;
+    border:0;
+    background-color: #555;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.indicator-link:hover,
+.indicator-link:active {
+    background-color: rgb(30, 147, 152);
+    border: 1px solid rgb(30, 147, 152);
+    color: #fff;
+}
+
+
+/*************UPPER LINE CHART-TABLE***********************/
+.upper-grid{
+
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    flex: 1 1 calc(33% - 2em);
+    align-content: flex-end;
+}
+
+
+/*************LOWER LINE CONTROL PANELS***********************/
+.lower{
+    display: table-row;
+}
+
+/*************LOWER LINE CONTROL PANELS***********************/
+.lower-grid{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-content: flex-end;
+    margin-bottom: 2%;
+}
+
+
+/*************TIME-SERIES LINE CHART***********************/
+
+.smaller-height {
+    top: -40px;
+}
+
+.chart-page-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.chart-container {
+    align-self:flex-start;
+
+}
+
+.plot-container.plotly{
+    padding-right:100%
+}
+
+
+/************* YEAR BTNS ***********************/
+.yearBtn-container {
+    float: left;
+    width: 5%;
+    margin: 450% 0 0 20%;
+
+}
+
+.clmBtns {
+    margin-top: 4%;
+}
+
+
+/*************TIME-SERIES TABLE ***********************/
+
+#table_div{
+    max-width: 37%;
+    height: 300px;
+    position: absolute;
+    border-radius:6px;
+}
+
+html>body tbody.scrollContent {
+    display: block;
+    height: 100%;
+    table-layout: fixed;
+    overflow:auto;
+    position:relative;
+}
+
+.js-plotly-plot {
+    height: 350px;
+}
+
+
+
+/********** PLOT UPDATER FORM ********************/
+.update-form {
+    background-color: rgba(85, 85, 85, 0.34);
+    border-radius: 20px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+}
+
+.update-form > div {
+    margin: 10px;
+}
+/**********both controllers *********/
+
+.upper > .btn,
+.upper > .labels,
+.lower > .btn,
+.lower > .labels{
+    float: left;
+}
+
+
+
+/**********right controller*********/
+.num-of-cols-form {
+    background-color: rgba(85, 85, 85, 0.34);
+    border-radius: 20px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+}
+
+.num-of-cols-form > div {
+    margin: 10px;
+}
+
+
+
+
+.date-col{
+    display:table-cell;
+    width: 50%;
+}
+.next-col{
+    display:table-cell;
+    }
+.column-col{
+    display:table-cell;
+    width: 50%;
+}
+
+
+#lbl_col_select{
+    padding-left: 15%;
+    display:table-row;
+}
+
+
+#lbl_col_submit{
+    display:table-row;
+}
+
+#lbl_date{
+    display:table-row;
+}
+
+/**********left controller**********/
+.switch-col{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.table-name-col{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+.column-name-col{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+.submit-col{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.select-elements{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#lbl_table{
+    padding-left:25%;
+    display:table-row;
+}
+
+#lbl_col{
+    padding-left: 25%;
+    display:table-row;
+}
+
+#lbl_update{
+    margin-left: -15%;
+    display:table-row;
+}
+
+#lbl_reverse{
+    display:table-row;
+}
+
+#tbl_name{
+    margin-left: -4%;
+}
+
+
+.btn {
+    border-radius: 5px!important;
+}
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    font-weight: 300;
+    text-decoration: none;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    border-bottom: 2px solid rgb(30, 147, 152);
+    color: rgb(30, 147, 152);
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    border-bottom: 2px solid rgb(30, 147, 152);
+    color: rgb(30, 147, 152);
+    cursor: pointer;
+}
+.btn:hover,
+.btn:active,
+.btn:hover .icon-small,
+.btn:active .icon-small{
+    color: rgb(30, 147, 152);
+    cursor: pointer;
+}
+
+#remove_year{
+    margin-bottom: 50%;
+}
+
+.icon-small {
+    color: rgba(9, 9, 9, 0.72);
+}
+
+.icon-small:link,
+.icon-small:visited{
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-size: 200%;
+    line-height: 120%;
+    vertical-align: middle;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+
+.col.span-2-of-10 {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+#btn_remove_col,
+#btn_add_col{
+    margin: 0 0 0 0%;
+}
+
+#year_btns{
+    width: 3%;
+}
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin: 3% 0 2% -30%;
+  width: 90%;
+  border-radius:200px!important;
+  display: none;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+.lobibox-header {
+    background-color: #345248!important;
+}
+
+.lobibox-footer{
+    background-color: #2f6352!important;
+}
+
+/*-------------------------------*/
+/* FOOTER*/
+/*-------------------------------*/
+
+footer {
+    position:relative;
+    background-color: #a3d8e4;
+    font-size: 80%;
+}
+
+.feedback-page footer {
+    padding-top: 20px;
+}
+
+.footer-container {
+     display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.site-map{
+    display:grid;
+}
+
+.site-map-column {
+    grid-column: 1;
+}
+
+.copyright {
+    grid-row:2;
+    grid-column:1/-1;
+    margin-top:-1%;
+}
+
+.copyright a:link,
+.copyright a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #444444;
+    transition: color 0.2s;
+}
+
+.copyright a:hover,
+.copyright a:active {
+    color: rgb(33, 128, 152);
+}
+
+.footer-nav {
+    list-style: none;
+    float:left;
+}
+
+
+
+.footer-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.footer-nav li:last-child {
+    margin-right: 20px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited  {
+    text-decoration: none;
+    border: 0;
+    color: #444444;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: rgb(33, 128, 152);
+}
+
+
+#facebook,
+#twitter,
+#snapchat,
+#instagram {
+    transition: color 0.2s;
+}
+
+#facebook:hover {
+    color: #3b5998;
+}#twitter:hover {
+    color: #55acee;
+}#snapchat:hover {
+    color: #fffc00;
+}#instagram:hover {
+    color: #e95950;
+}
+
+footer p {
+    color: #444444;
+    text-align: center;
+}
+/*********** SPINNER LOADER SMALL *****************/
+
+.loader {
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+
+    /*Centering my shade */
+    padding-top:10%;
+    padding-left:47%;
+
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    position:fixed;
+}
+
+.loader::after {
+    content:'';
+    display:block;
+    position:absolute;
+    border-top-color:transparent;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+
+
+.loader svg {
+    height: 7.5rem;
+    width: 7.5rem;
+    fill: #a3d8e4;
+    transform-origin: 44% 50%;
+    animation: rotate 1.5s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+    transform: rotate(0); }
+    100% {
+    transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotate {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+.spinner-msg {
+    margin-left: -8%;
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+
+/***************ABOUT PAGE ********************/
+
+.about a:link,
+.about a:visited {
+    color: rgb(30, 147, 152);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition:border-bottom 0.2s, color 0.2s;
+}
+
+
+.about a:hover,
+.about a:active {
+    color: rgb(30, 147, 152);
+    border-bottom: 1px solid rgb(30, 147, 152);
+}
+
+/***************REFERENCES PAGE ********************/
+
+.references {
+    margin-bottom: 10%;
+}
+
+
+.references a:link,
+.references a:visited {
+    color: rgb(30, 147, 152);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition:border-bottom 0.2s, color 0.2s;
+}
+
+
+.references a:hover,
+.references a:active {
+    color: rgb(30, 147, 152);
+    border-bottom: 1px solid rgb(30, 147, 152);
+}
