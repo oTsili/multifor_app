@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 from src.controller.database import Database
 from helping_data import indicators, pestel_categories, country_codes, eurostat_country_codes
 
@@ -51,10 +52,39 @@ my_dict = {'index': 'indicators',
            'data': [x for x in indicators.values()]}
 Database.insert("project_data", my_dict)
 
+csv_path='script_files/dataframes'
+for country in countries_list:
+    my_col = Database.DATABASE['dataframes']
+    df = pd.read_csv(csv_path + '/' + country + '.csv', encoding='utf-8', index_col=0)
+    my_dict = {}
+    for col in df.columns:
+        my_dict[col] = json.loads(df[col].to_json(orient='records'))
+
+    my_col.insert_one({"index": country, "data": my_dict})
+
+for indicator in indicators.values():
+    my_col = Database.DATABASE['dataframes']
+    df = pd.read_csv(csv_path + '/' + indicator + '.csv', encoding='utf-8', index_col=0)
+    my_dict = {}
+    for col in df.columns:
+        my_dict[col] = json.loads(df[col].to_json(orient='records'))
+
+    my_col.insert_one({"index": indicator, "data": my_dict})
+
+csv_path = 'script_files/partial_dfs'
+
+for country in ['Ireland', 'Spain', 'Greece', 'United_Kingdom', 'Sweden']:
+    my_col = Database.DATABASE['partial_dfs']
+    df = pd.read_csv(csv_path + '/' + country + '.csv', encoding='utf-8', index_col=0)
+    my_dict = {}
+    for col in df.columns:
+        my_dict[col] = json.loads(df[col].to_json(orient='records'))
+
+    my_col.insert_one({"index": country, "data": my_dict})
+
 
 path_file = 'src/indicators/'
 
 for indicator, alias in indicators.items():
-    print(alias)
     Database.csv_to_mogodb(alias, f'{path_file}/{alias}.csv')
 
