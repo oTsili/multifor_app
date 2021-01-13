@@ -1,9 +1,10 @@
 #!/bin/sh
 #
-# This is just a script that is used to launch the app. It first
-# launches a mongo DB instance, populates it with the data (which are
-# static anyway) and then starts a gunicorn server. It is meant to be
-# used as the CMD to launch when the docker image starts.
+# This is just a script that is used to launch the app. It installs any
+# wheels that may be around and then starts a gunicorn server. It is
+# meant to be used as the CMD to launch when the docker image starts.
+# NOTE: the first time the container is run, you should run the
+# 1st-run.sh script instead.
 
 # ok, so if a wheel directory is present (mounted as a volume in
 # docker), then install the wheels that are in there and replace the
@@ -13,13 +14,6 @@
 if [ -d /wheels ]; then
 	pip install -U /wheels/*.whl
 fi
-
-# run the DB
-mongod --noauth &
-sleep 10 # give some time for the db to spin up
-
-# populate the database
-python helping_scripts.py
 
 # start the app. Huge timeouts because it takes a long time for a lot of
 # actions to be processed
