@@ -13,6 +13,13 @@ if [ -d /wheels ]; then
 	pip install -U /wheels/*.whl
 fi
 
-# populate the database
-python helping_scripts.py
+mongoimport --db=multifor \
+	--collection=dataframes \
+	--file=script_files/dataframes.json
+mongoimport --db=multifor \
+	--collection=partial_dfs \
+	--file=script_files/partial_dfs.json
+mongoimport --db=multifor \
+	--collection=project_data \
+	--file=script_files/project_data.json
 
